@@ -1,2 +1,2 @@
-# react-fundamentals
-tyler mcginnis
+# github-battle
+tyler mcginnis - react-fundamentals

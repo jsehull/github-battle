@@ -102,3 +102,75 @@ ReactDOM.render(
     />,
     document.getElementById('friends')
 );
+
+
+// - Implicit Binding
+    // what is to the left of . when invoking
+// this notes
+// var me = {
+//     name: 'Jesse',
+//     age: '11',
+//     sayName: function() {
+//         console.log(this.name);
+//     }
+// };
+
+// me.sayName();
+
+var sayNameMixin = function(obj) {
+    obj.sayName = function() {
+        console.log(this.name);
+    };
+};
+
+var me = {
+    name: 'Tyler',
+    age: 25,
+    color: 'blue'
+};
+
+sayNameMixin(me);
+me.sayName();
+
+
+
+// - Explicit Binding
+    // call - pass args one by one
+    // apply - pass args as array 
+    // bind - like call, but returns func to invoke later
+
+var sayAge = function() {
+    console.log('My age is ' + this.age);
+};
+
+sayAge.call(me);
+
+
+var sayColor = function(food1, food2, food3) {
+    console.log('My favorite color is ' + this.color + ' and I also eat ' + food1 + ', ' + food2 + ', ' + 'and ' + food3);
+};
+
+var foods = ['apples', 'oranges', 'lemons'];
+
+sayColor.apply(me, foods);
+////
+var newFn = sayColor.bind(me, foods[0], foods[1], foods[2]);
+console.log('--------');
+newFn();
+// binds as new function to be used later
+
+
+
+// new Binding
+    // bound to new object constructed
+var Animal = function(color, name, type) {
+    // this = {};
+    this.color = color;
+    this.name = name;
+    this.type = type;
+};
+
+var zebra = new Animal('black and white', 'Zorro', 'Zebra');
+
+// window Binding
+    // not ideal, but if nothing to left of . it binds to window
