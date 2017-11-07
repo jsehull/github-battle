@@ -5,49 +5,103 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  ul {
-    padding: 0;
-  }
-  
-  li {
-    list-style-type: none;
-  }
-  
-  .languages {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .languages li {
-    margin: 10px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+}
 
-  /* Repo Grid */
-  .popular-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+ul {
+  padding: 0;
+}
 
-  .popular-item {
-    margin: 20px;
-    text-align: center;
-  }
+li {
+  list-style-type: none;
+}
 
-  .space-list-items {
-    margin-bottom: 7px;
-  }
+a {
+  text-decoration: none;
+  color: #d0021b;
+}
 
-  .avatar {
-    width: 150px;
-    border-radius: 50%;
-  }
+.languages {
+  display: flex;
+  justify-content: center;
+}
 
-  .popular-rank {
-    font-size: 20px;
-    margin: 10px;
-  }
+.languages li {
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button {
+  margin: 10px auto;
+  padding: 7px 0;
+  display: block;
+  width: 200px;
+  background: #0a0a0a;
+  border: none;
+  border-radius: 3px;
+  color: #e6e6e6;
+  font-size: 16px;
+  text-align: center;
+}
+ 
+.button:hover:enabled {
+  background: linear-gradient(#1a1a1a,#0a0a0a);
+  color: #fff;
+  text-decoration: none;
+}
+ 
+.button:active {
+  transform: translateY(1px);
+}
+
+
+
+/* Repo Grid */
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.popular-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.space-list-items {
+  margin-bottom: 7px;
+}
+
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.popular-rank {
+  font-size: 20px;
+  margin: 10px;
+}
+
+
+
+/* nav */
+.nav {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 15px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+
+
+/* Home */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
